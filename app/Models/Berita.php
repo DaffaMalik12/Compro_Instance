@@ -3,13 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str; // ← ini yang penting ditambahkan!
 
 class Berita extends Model
 {
     //
     protected $fillable = [
-        'judul', 'slug', 'isi', 'kategori', 'tanggal_publish', 'penulis',
+        'judul', 'slug', 'isi', 'kategori', 'tanggal_publish', 'penulis', 'gambar',
     ];
+    
 
     // Auto-generate slug
     protected static function booted()
